@@ -12,6 +12,14 @@ function createGrid(num) {
 			newRow.appendChild(newSquare);
 		}
 	}
+
+	let squares = document.querySelectorAll('.square');
+
+	squares.forEach((square) => {
+		square.addEventListener('click', (e) => {
+			console.log(e);
+		});
+	});
 }
 function startButton() {
 	let num = parseInt(prompt('Please put in a number!'));
@@ -28,3 +36,9 @@ function startButton() {
 
 const btn = document.querySelector('#gridCreator');
 btn.addEventListener('click', startButton);
+
+// squares.forEach((square) => {
+// 	square.addEventListener('click', () => {
+// 		square.classList.add('black');
+// 	});
+// });

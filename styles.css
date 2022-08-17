@@ -2,15 +2,23 @@
 	box-sizing: border-box;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+}
+
 .main {
-	width: fit-content;
-	height: auto;
+	max-width: 1000px;
+	max-height: 1000px;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	border: 1px solid black;
 	justify-content: center;
 	align-items: center;
+	border: 2px solid black;
 }
 
 .row {
@@ -22,12 +30,16 @@
 }
 
 .square {
-	height: 15px;
-	width: 15px;
+	min-height: 10px;
+	min-width: 10px;
 	margin: 0;
 	border: 1px solid black;
 }
 
 .black {
 	background-color: black;
+}
+
+.white {
+	background-color: white;
 }

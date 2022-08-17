@@ -1,4 +1,16 @@
 const mainframe = document.querySelector('.main');
+const clear = document.querySelector('#clear');
+
+function clearGrid() {
+	let squares = document.querySelectorAll('.square');
+	squares.forEach((square) => {
+		square.style.backgroundColor = 'white';
+	});
+}
+
+function newBgColor(e) {
+	e.target.style.backgroundColor = 'black';
+}
 
 function createGrid(num) {
 	for (let i = 1; i <= num; i++) {
@@ -12,17 +24,20 @@ function createGrid(num) {
 			newRow.appendChild(newSquare);
 		}
 	}
-
 	let squares = document.querySelectorAll('.square');
 
 	squares.forEach((square) => {
-		square.addEventListener('click', (e) => {
-			console.log(e);
-		});
+		square.addEventListener('mouseover', newBgColor);
 	});
 }
 function startButton() {
-	let num = parseInt(prompt('Please put in a number!'));
+	let num = parseInt(prompt('Please put in a number up to 100!'));
+
+	if (num > 100) {
+		alert("That's a bit more then 100, isn't it? Try again.");
+		parseInt(prompt('Please put in a number less then 100!'));
+	} else {
+	}
 
 	if (mainframe.hasChildNodes()) {
 		while (mainframe.firstChild) {
@@ -37,8 +52,4 @@ function startButton() {
 const btn = document.querySelector('#gridCreator');
 btn.addEventListener('click', startButton);
 
-// squares.forEach((square) => {
-// 	square.addEventListener('click', () => {
-// 		square.classList.add('black');
-// 	});
-// });
+clear.addEventListener('click', clearGrid);

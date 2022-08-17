@@ -5,10 +5,12 @@
 .main {
 	width: fit-content;
 	height: auto;
-	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
+	border: 1px solid black;
+	justify-content: center;
+	align-items: center;
 }
 
 .row {
@@ -16,11 +18,12 @@
 	flex-direction: row;
 	margin: 0;
 	width: fit-content;
+	height: auto;
 }
 
 .square {
-	height: 20px;
-	width: 20px;
-	border: 1px solid black;
+	height: 15px;
+	width: 15px;
 	margin: 0;
+	border: 1px solid black;
 }

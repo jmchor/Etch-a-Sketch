@@ -22,17 +22,11 @@ function createGrid(num) {
 		mainframe.appendChild(newRow);
 
 		for (let i = 1; i <= num; i++) {
+			let newWidthHeight = 900 / parseInt(num) - 1 + 'px'; //divide the containing elements width by number of squares
 			newSquare = document.createElement('div');
 			newSquare.classList.add('square');
-			if (num <= 10) {
-				(newSquare.style.width = '70px'), (newSquare.style.height = '70px');
-			} else if (num <= 30) {
-				(newSquare.style.width = '25px'), (newSquare.style.height = '25px');
-			} else if (num <= 60) {
-				(newSquare.style.width = '13px'), (newSquare.style.height = '13px');
-			} else if (num <= 100) {
-				(newSquare.style.width = '8px'), (newSquare.style.height = '8px');
-			}
+			newSquare.style.width = newWidthHeight;
+			newSquare.style.height = newWidthHeight;
 			newRow.appendChild(newSquare);
 		}
 	}

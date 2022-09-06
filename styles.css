@@ -9,27 +9,43 @@ body {
 	align-items: center;
 	gap: 5rem;
 	font-family: 'Work Sans';
-	background: linear-gradient(to right, rgb(247, 247, 247) 0%, rgb(243, 227, 213) 100%);
+	background: linear-gradient(to right, rgb(238, 210, 49) 0%, rgb(255, 227, 136) 100%);
 }
 
 .main {
-	width: 850px;
-	height: 850px;
+	width: 900px;
+	height: 900px;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	justify-content: center;
 	align-items: center;
-	background-color: brown;
+	background-color: rgb(204, 36, 36);
 	border-radius: 10px;
+	padding: 20px;
+	border: 2px solid black;
+	box-shadow: inset 0 0 0.2rem rgb(0 0 0 / 30%);
 }
 header {
+	width: 100%;
 	text-align: center;
+}
+header h1 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#heading {
+	width: 20rem;
+	background-color: rgb(204, 36, 36);
+	transform: skew(9deg, 0deg);
+	transform: rotate(4deg);
+	margin: 0 15px;
 }
 
 #nav {
 	display: flex;
-	width: 20rem;
+	width: inherit;
 	justify-content: space-between;
 }
 
@@ -37,8 +53,17 @@ button {
 	outline: none;
 	border: none;
 	font-weight: 700;
-	font-size: 16px;
-	padding: 10px 20px;
+	font-size: 26px;
+	padding: 30px 50px;
+	background-color: rgb(152, 192, 202);
+	border-radius: 10px;
+}
+
+#gridCreator {
+	transform: rotate(-6deg);
+	position: relative;
+	left: -50px;
+	top: 30px;
 }
 
 .row {

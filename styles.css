@@ -11,8 +11,8 @@ body {
 }
 
 .main {
-	width: 1800px;
-	height: 1800px;
+	width: 850px;
+	height: 850px;
 	display: flex;
 	flex-direction: column;
 	margin: 0;

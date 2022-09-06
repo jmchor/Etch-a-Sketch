@@ -13,6 +13,9 @@ function newBgColor(e) {
 }
 
 function createGrid(num) {
+	if (mainframe.hasChildNodes()) {
+		mainframe.removeChild(announceBox.childNodes[0]);
+	}
 	for (let i = 1; i <= num; i++) {
 		newRow = document.createElement('div');
 		newRow.classList.add('row');
@@ -21,6 +24,15 @@ function createGrid(num) {
 		for (let i = 1; i <= num; i++) {
 			newSquare = document.createElement('div');
 			newSquare.classList.add('square');
+			if (num <= 10) {
+				(newSquare.style.width = '70px'), (newSquare.style.height = '70px');
+			} else if (num <= 30) {
+				(newSquare.style.width = '25px'), (newSquare.style.height = '25px');
+			} else if (num <= 60) {
+				(newSquare.style.width = '13px'), (newSquare.style.height = '13px');
+			} else if (num <= 100) {
+				(newSquare.style.width = '8px'), (newSquare.style.height = '8px');
+			}
 			newRow.appendChild(newSquare);
 		}
 	}

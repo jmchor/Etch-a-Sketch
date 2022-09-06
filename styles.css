@@ -57,6 +57,7 @@ button {
 	padding: 30px 50px;
 	background-color: rgb(152, 192, 202);
 	border-radius: 10px;
+	border: 1px solid black;
 }
 
 #gridCreator {

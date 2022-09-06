@@ -1,5 +1,8 @@
 const mainframe = document.querySelector('.main');
 const clear = document.querySelector('#clear');
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true); //courtesy of michaelosman
+document.body.onmouseup = () => (mouseDown = false);
 
 function clearGrid() {
 	let squares = document.querySelectorAll('.square');
@@ -9,6 +12,9 @@ function clearGrid() {
 }
 
 function newBgColor(e) {
+	if (e.type === 'mouseover' && !mouseDown) return;
+	//mouseDown evaluates to false, so !mouseDown = truthy
+	//comes down to "on mouse over and holding the mousebutton"
 	e.target.style.backgroundColor = 'black';
 }
 
@@ -34,6 +40,7 @@ function createGrid(num) {
 
 	squares.forEach((square) => {
 		square.addEventListener('mouseover', newBgColor);
+		square.addEventListener('mousedown', newBgColor);
 	});
 }
 function startButton() {

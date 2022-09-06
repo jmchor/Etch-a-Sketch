@@ -21,6 +21,9 @@ body {
 	background-color: brown;
 	border-radius: 10px;
 }
+header {
+	text-align: center;
+}
 
 .row {
 	display: flex;

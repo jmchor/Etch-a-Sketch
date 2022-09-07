@@ -28,7 +28,8 @@ function createGrid(num) {
 		mainframe.appendChild(newRow);
 
 		for (let i = 1; i <= num; i++) {
-			let newWidthHeight = 900 / parseInt(num) - 1 + 'px'; //divide the containing elements width by number of squares
+			let suffix = mainframe.dataset.size;
+			let newWidthHeight = 900 / parseInt(num) - 1 + suffix; //divide the containing elements width by number of squares
 			newSquare = document.createElement('div');
 			newSquare.classList.add('square');
 			newSquare.style.width = newWidthHeight;

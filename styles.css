@@ -26,6 +26,10 @@ body {
 	border: 2px solid black;
 	box-shadow: inset 0 0 0.2rem rgb(0 0 0 / 30%);
 }
+
+section {
+	height: 1200px;
+}
 header {
 	width: 100%;
 	text-align: center;
